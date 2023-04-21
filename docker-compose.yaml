@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  detect1:
+    image: fsyj159/detect:latest
+    ports:
+      - "7001:5000"
+    networks:
+      - detect
+
+  detect2:
+    image: fsyj159/detect:latest
+    ports:
+      - "7002:5000"
+    networks:
+      - detect
+
+  detect3:
+    image: fsyj159/detect:latest
+    ports:
+      - "7003:5000"
+    networks:
+      - detect
+
+  detect4:
+    image: fsyj159/detect:latest
+    ports:
+      - "7004:5000"
+    networks:
+      - detect
+
+networks:
+  detect:
+    driver: bridge
